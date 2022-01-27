@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贪吃蛇</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <style>
+      #app {
+        position: relative;
+        top: 10vmin;
+        border-radius: 16px;
+        border: 10px solid #000;
+        background-color: #b7d4a8;
+      }
+
+      .board {
+        margin: 16px 20px;
+      }
+      .bar {
+        display: flex;
+        justify-content: space-between;
+        margin: 26px 20px 6px 20px;
+        font: 14px 'Courier';
+      }
+
+      .row {
+        display: flex;
+        border-bottom: 1px solid #000;
+      }
+
+      .row:first-child {
+        border-top: 1px solid #000;
+      }
+
+      .cell {
+        height: 14px;
+        width: 14px;
+        border-right: 1px solid #000;
+      }
+
+      .cell:first-child {
+        border-left: 1px solid #000;
+      }
+
+      .food {
+        background-color: brown;
+      }
+
+      .snake-head {
+        background-color: #333;
+      }
+      .snake-body {
+        background-color: #444;
+      }
+
+      code {
+        padding: 4px 8px;
+        margin: 0 4px;
+        background-color: #eee;
+        font-weight: bold;
+        border-radius: 4px;
+      }
+
+      .tips {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div class="tips">
+      说明：
+      <p><code>Space</code>键控制游戏开始与暂停</p>
+      <p><code>w</code><code>a</code><code>s</code><code>d</code>键控制蛇运动方向</p>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
